@@ -14,11 +14,11 @@ class Worker:
         else:
             self.monthly_salary.append(salary)
     
-    #average per month in a year
-    def average_salary():
+    #average per month in 3 month
+    def average_salary(self):
         sum_ = 0
         for money in self.monthly_salary:
             sum_ = sum_ + money
-        total = sum_/12
+        total = sum_/3
         return total
 
