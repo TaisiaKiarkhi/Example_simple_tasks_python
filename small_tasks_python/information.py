@@ -24,6 +24,14 @@ dict_positions = {
     "Manager" : managers
     }
 
-
+#just to practice 2D-lists
+deadlines = [
+    ["12.12.2023", "09.10.2023", "28. 11.23"], #for clerks
+    ["23.09.2023", "17.11.2023", "19.12. 2023"] #for managers
+    ]
+ 
+for row in deadlines:
+    for columns in row[0]:
+        print(columns)
 
 
