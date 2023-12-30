@@ -1,6 +1,7 @@
 from functions import calc_age
 from Worker import Worker
 from information import input_info, dict_positions, sort_positions
+from Customer import Customer
 print("Hello! Welcome to this little program. Enter your age: ")
 
 age = int(input())
@@ -15,7 +16,10 @@ if(age<0):
 
 print("Your age in days is " + str(calc_age(age)))
 
-worker_1 = Worker("Alex Table", age, "Clerk")
+#worker_1 = Worker("Alex Table", age, "Clerk")
+worker_1 = Worker(age = age, name = "Alex Table", position= "Clerk")
+customer1 = Customer("John Jack", age = 32)
+customer1.check_age()
 
 print(worker_1.name)
 
