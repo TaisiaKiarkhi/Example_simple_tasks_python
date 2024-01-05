@@ -1,7 +1,9 @@
+from itertools import product
 from functions import calc_age
 from Worker import Worker
 from information import input_info, dict_positions, sort_positions
 from Customer import Customer
+from Product import Product
 print("Hello! Welcome to this little program. Enter your age: ")
 
 age = int(input())
@@ -21,17 +23,38 @@ worker_1 = Worker(age = age, name = "Alex Table", position= "Clerk")
 customer1 = Customer("John Jack", age = 32)
 customer1.check_age()
 
-print(worker_1.name)
+#print(worker_1.name)
+#
+#for i in range (0, 3):
+#    worker_1.add_salary(int(input()))
+#    #print(worker_1.monthly_salary[i])
+#
+#print(worker_1.monthly_salary)
+#print(str(worker_1.average_salary()))
+#
+#input_info()
+#sort_positions()
+#print("To find people who work as clerks type Clerk, to find people who works as managers type Manager")
+#print(dict_positions[str(input())])
 
-for i in range (0, 3):
-    worker_1.add_salary(int(input()))
-    #print(worker_1.monthly_salary[i])
 
-print(worker_1.monthly_salary)
-print(str(worker_1.average_salary()))
+bought_items = 0
 
-input_info()
-sort_positions()
-print("To find people who work as clerks type Clerk, to find people who works as managers type Manager")
-print(dict_positions[str(input())])
+products = []
 
+bought_items = int(input("Write amount of products you want to buy"))
+
+for i in range(0, bought_items):
+    name = str(input("Type the name of the product: "))
+    price = float(input("Type the price of the product: "))
+    
+    products.append(Product(name, price))
+
+
+
+if bought_items>=2 : #20% discount
+    discount = lambda total_price: total_price * 0.8
+    total = 0
+    for i in range(0, len(products)):
+        total = total + products[i].price
+    print(discount(total))
