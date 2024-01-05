@@ -58,3 +58,15 @@ if bought_items>=2 : #20% discount
     for i in range(0, len(products)):
         total = total + products[i].price
     print(discount(total))
+
+repeat_products = products * 10 #repeats each element 10 times
+for i in range (0, len(repeat_products)):
+     print(repeat_products[i].product)
+
+product_test = Product("Milk", 1.8)
+
+list_of_products_with_weight = []
+print(product_test.sale(product_test.product, product_test.price, 1000))
+
+for i in range(0,2):
+    list_of_products_with_weight.append(product_test.sale(str(input()), float(input()), float(input())))
