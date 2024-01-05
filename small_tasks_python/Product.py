@@ -6,5 +6,6 @@ class Product:
     def sale(self, *name_price_weight):  #makes the arguments a tuple
         return name_price_weight
 
-        
+   
+
 

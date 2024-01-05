@@ -1,5 +1,5 @@
 from itertools import product
-from functions import calc_age
+from functions import calc_age, products_dict
 from Worker import Worker
 from information import input_info, dict_positions, sort_positions
 from Customer import Customer
@@ -65,8 +65,13 @@ for i in range (0, len(repeat_products)):
 
 product_test = Product("Milk", 1.8)
 
-list_of_products_with_weight = []
-print(product_test.sale(product_test.product, product_test.price, 1000))
+#list_of_products_with_weight = []
+#print(product_test.sale(product_test.product, product_test.price, 1000))
+#
+#for i in range(0,2):
+#    list_of_products_with_weight.append(product_test.sale(str(input()), float(input()), float(input())))
 
-for i in range(0,2):
-    list_of_products_with_weight.append(product_test.sale(str(input()), float(input()), float(input())))
+meat = {"beef": "Beef meat" "Roast beef" "Meatballs beef", "chicken": "Chicken breast" "Chicken sausages" "Grilled chicken", "pork": "Pork sausages" "Pork meatballs" }
+fish = {"salmon": "Salmon fillets" "Nigiri", "tuna": "Canned tuna" "Tuna fillets" }
+
+print(products_dict(meat, fish, milk= "Cow Milk" "Oatmilk", cheese= "Mozzarella" "Feta"))
