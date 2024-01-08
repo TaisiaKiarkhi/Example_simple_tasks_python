@@ -24,6 +24,9 @@
     <Compile Include="functions.py" />
     <Compile Include="information.py" />
     <Compile Include="Customer.py" />
+    <Compile Include="Milk_Product.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Product.py" />
     <Compile Include="Worker.py">
       <SubType>Code</SubType>

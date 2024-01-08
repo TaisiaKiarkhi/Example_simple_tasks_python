@@ -4,6 +4,7 @@ from Worker import Worker
 from information import input_info, dict_positions, sort_positions
 from Customer import Customer
 from Product import Product
+from Milk_Product import Milk_Product
 print("Hello! Welcome to this little program. Enter your age: ")
 
 age = int(input())
@@ -74,4 +75,8 @@ product_test = Product("Milk", 1.8)
 meat = {"beef": "Beef meat" "Roast beef" "Meatballs beef", "chicken": "Chicken breast" "Chicken sausages" "Grilled chicken", "pork": "Pork sausages" "Pork meatballs" }
 fish = {"salmon": "Salmon fillets" "Nigiri", "tuna": "Canned tuna" "Tuna fillets" }
 
+
 print(products_dict(meat, fish, milk= "Cow Milk" "Oatmilk", cheese= "Mozzarella" "Feta"))
+
+cheese = Milk_Product("cow_milk", True, "cheese")
+print(cheese.sale("Norvegia", 9.1, 700))
